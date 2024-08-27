@@ -1,4 +1,3 @@
-import math
 
 first_name = "Mohamed"
 last_name = "Mohamed"
@@ -32,16 +31,16 @@ floor_division = num_one // num_two
 print("floor_division: ", floor_division)
 
 redius = 30
-area_of_circle = math.pi * (redius ** 2)
+area_of_circle = 3.14 * (redius ** 2)
 print("Area of circle: ", area_of_circle)
 
 
-circum_of_circle = 2 * math.pi * redius
+circum_of_circle = 2 * 3.14 * redius
 print("Circumference: ", circum_of_circle)
 
 
 input_radius = float(input("Enter a redius value: "))
 print(input_radius)
 input_value = input_radius
-input_result = math.pi * (input_value ** 2)
+input_result = 3.14 * (input_value ** 2)
 print("Area of radius: ", input_result)
