@@ -175,3 +175,4 @@ for a in range(1, 6):
     ab2 = a ** (b + 1)
     ab3 = a ** ( b + 2)
     print(f"{a} {b} {ab} {ab2} {ab3}")
+    
