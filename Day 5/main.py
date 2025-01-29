@@ -3,9 +3,9 @@ list = list()
 print(list)
 
 
-fruits = ['apple', 'orange', 'mango', 'lemon']                   # list of fruits
-vegetables = ['Tomato', 'Potato', 'Cabbage','Onion', 'Carrot']      # list of vegetables
-animal_products = ['milk', 'meat', 'butter', 'yoghurt']             # list of animal products
+fruits = ['apple', 'orange', 'mango', 'lemon']                       # list of fruits
+vegetables = ['Tomato', 'Potato', 'Cabbage','Onion', 'Carrot']       # list of vegetables
+animal_products = ['milk', 'meat', 'butter', 'yoghurt']              # list of animal products
 web_techs = ['HTML', 'CSS', 'JS', 'React','Redux', 'Node', 'MongDB'] # list of web technologies
 countries = ['Finland', 'Estonia', 'Denmark', 'Sweden', 'Norway']
 
@@ -34,16 +34,16 @@ print(rest)           # ['item4', 'item5']
 
 
 fruits = ['banana', 'orange', 'mango', 'lemon']
-fruits.append('banana')
-print(fruits) #
-
-fruits.insert(0, 'Babay')
+fruits.append('banana') # add to list at the end
 print(fruits) 
 
-fruits.remove('banana')
+fruits.insert(0, 'moha') # add to list at the start
+print(fruits) 
+
+fruits.remove('banana') # remove from list at the first banana
 print(fruits)
 
-fruits.pop()
+fruits.pop() # remove from list at the end
 print(fruits)
 
 fruits = ['banana', 'orange', 'mango', 'lemon', 'kiwi', 'lime']
@@ -112,6 +112,6 @@ print(ages) # [24, 25, 24, 26, 25, 24, 19, 22]
 # syntax
 lst = ['item1', 'item2']
 lst.sort()                # ascending
-print("asc", lst) 
+print("asc", lst)
 lst.sort(reverse=True)    # descending
 print("desc",lst)
