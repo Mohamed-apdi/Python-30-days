@@ -48,3 +48,36 @@ def calculate_of_quadratic(a,b,c,x):
     eq_sol = (a * x) ** 2 + b * x + c
     return eq_sol
 print(calculate_of_quadratic(4, 2, 5, 3))
+
+# 8: Declare a function named print_list. It takes a list as a parameter and it prints out each element of the list.
+def print_list(*list):
+    
+    for i in list:
+        print(i)
+
+print_list("jacar", 494, 30, "mahdi", 73, 43, "sadaq")
+
+# 9: Declare a function named reverse_list. It takes an array as a parameter and it returns the reverse of the array (use loops).
+def reverse_list(arr):
+    reversed_arr = []
+    for i in range(len(arr) -1, -1, -1):
+        reversed_arr.append(arr[i])
+    return reversed_arr
+            
+print(reverse_list([1,2,3,4,5]))
+
+# 10: Declare a function named capitalize_list_items. It takes a list as a parameter and it returns a capitalized list of items
+def capitalize_list_items(list):
+    capitalized = []
+    for i in list:
+        capitalized.append(i.capitalize())
+    return capitalized
+print(capitalize_list_items(["moha","mahdi", "sadaq"]))
+
+# 11: Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.
+def add_item(items, item):
+    items.append(item)
+    return items
+items = [1, 2, 4, 5]
+
+print(add_item(items, 4))
