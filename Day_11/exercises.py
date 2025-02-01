@@ -1,3 +1,4 @@
+# Exercises: Level 1
 # 1: Declare a function add_two_numbers. It takes two parameters and it returns a sum.
 def sum_two_num(num1, num2):
     return num1 + num2
@@ -81,3 +82,105 @@ def add_item(items, item):
 items = [1, 2, 4, 5]
 
 print(add_item(items, 4))
+
+# 12: Declare a function named remove_item. It takes a list and an item parameters. It returns a list with the item removed from it.
+def remove_item(items, item):
+    items.pop(item)
+    return items
+items = [1, 2, 4, 5]
+
+print(remove_item(items, 2))
+
+# 13: Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
+# formula n * (n + 1) / 2 
+def sum_of_numbers(num):
+    total = 0
+    total += num * (num + 1) / 2
+    return total
+print(sum_of_numbers(5))
+print(sum_of_numbers(10))
+
+# 14: Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
+# formula ((n + 1) // 2)²
+def sum_of_odds(num):
+    total = 0
+    total += ((num + 1) // 2) ** 2
+    return total
+
+print(sum_of_odds(4))
+
+# 15: Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
+# formula k = n // 2.  k * (k + 1)
+def sum_of_even(num):
+    k = num // 2
+    total = 0
+    total += k * (k + 1)
+    return total
+print(sum_of_even(6))
+
+
+# Exercises: Level 2
+
+# 1: Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+def evens_and_odds(n):
+    even = (n + 1) // 2
+    odd = (n // 2) + 1 
+    return even, odd
+
+even, odd = evens_and_odds(100)
+print(f"The number of odds are {odd}.")
+print(f"The number of evens are {even}.")
+
+# 2: Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+# 
+def factorial(n):
+    if n == 0 or n == 1: 
+        return 1
+    else:
+        return n * factorial(n - 1)
+     
+print(factorial(5))
+
+# 3: Call your function is_empty, it takes a parameter and it checks if it is empty or not
+def is_empty(x):
+    if x == 0 or x == None or isinstance(x, (str, list, tuple, dict, set)):
+        return "empty"
+    else:
+        return "not"
+print(is_empty({}))
+
+# 4: Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+
+# sorted arr
+def sorted_list(n):
+    for i in range(len(n)):
+        min_index = i
+        for j in range(i + 1, len(n)):
+            if n[j] < n[min_index]:
+                min_index = j
+        n[i], n[min_index] = n[min_index] , n[i] # swap
+    return n
+
+def calculate_mean(n):
+    total = 0
+    for i in n:
+        total += i
+    mean = total / len(n)
+    print(mean)
+calculate_mean([1, 2])
+
+def calculate_median(n):
+    s = sorted_list(n)
+    length = len(n)
+    
+    # find median
+    if length % 2 == 1: # odd
+        return s[length // 2]
+    else:
+        mid1, mid2 = length // 2 - 1, length // 2
+        return (s[mid1] + s[mid2]) / 2
+    
+    
+    
+print(calculate_median([4,1,2,5]))
+    
